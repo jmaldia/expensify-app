@@ -1,19 +1,16 @@
-* {
-    box-sizing: border-box;
-}
-
 html {
-    font-size: $px-base;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button:disabled {
-    cursor: default;
+  cursor: default;
 }
