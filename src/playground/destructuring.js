@@ -1,3 +1,7 @@
+// ----------------
+// OBJECT DESTRUCTURING
+// ----------------
+
 // const person = {
 //     name: 'Jon',
 //     age: 43,
@@ -16,15 +20,32 @@
 //     console.log(`It is ${city} in ${temperature}`);
 // }
 
-// CHALLENGE
-const book = {
-    title: 'Ego is the Enemy',
-    author: 'Ryan Holiday',
-    publisher: {
-        name: 'Penguin'
-    }
-};
+// Challenge
+// const book = {
+//     title: 'Ego is the Enemy',
+//     author: 'Ryan Holiday',
+//     publisher: {
+//         name: 'Penguin'
+//     }
+// };
 
-const { name: publisherName = 'Self-published' } = book.publisher
+// const { name: publisherName = 'Self-published' } = book.publisher
 
-console.log(publisherName);
+// console.log(publisherName);
+
+
+// ----------------
+// ARRAY DESTRUCTURING
+// ----------------
+
+const address = ['126 Hackett Pl', 'Rutherford', 'NJ', '07070'];
+const [, city, state = 'NY', ] = address;
+
+console.log(`You are in ${city}, ${state}`);
+
+// Challenge
+const item = ['Coffee (hot)', '$2.00', '$2.50','$2.75'];
+
+const [product, , medPrice] = item;
+
+console.log(`A medium ${product} costs ${medPrice}.`)
