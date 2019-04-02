@@ -20,7 +20,8 @@ class ExpenseForm extends React.Component {
             amount: props.expense ? (props.expense.amount / 100).toString() : 0,
             createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
             calendarFocused: false,
-            error: ''
+            error: '',
+            addOrEdit: props.addOrEdit
         };
     }
 
@@ -102,7 +103,7 @@ class ExpenseForm extends React.Component {
                         value={ this.state.note }
                         onChange={ this.onNoteChange }
                     />
-                    <button>Add Expense</button>
+                    <button>{ this.state.addOrEdit === 'add' ? 'Add Expense' : 'Save' }</button>
                 </form>
             </div>
         )

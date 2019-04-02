@@ -13,6 +13,7 @@ const AddExpensePage = (props) => (
                 props.dispatch(addExpense(expense));
                 props.history.push('/');
             }}
+            addOrEdit="add"
         />
     </div>
 );
