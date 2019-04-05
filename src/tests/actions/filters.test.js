@@ -39,10 +39,11 @@ test('should generate sort by date action object', () => {
 });
 
 test('should generate set text filter action object with text value', () => {
-    const action = setTextFilter('bill');
+    const text = 'bill'
+    const action = setTextFilter(text);
     expect(action).toEqual({
         type: 'SET_TEXT_FILTER',
-        text: 'bill'
+        text
     });
 });
 
